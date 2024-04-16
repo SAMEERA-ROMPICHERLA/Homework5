@@ -213,7 +213,7 @@ def question9():
     answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = 'The F-measure is chosen as the best metric because it balances precision and recall, while accuracy is considered the worst metric as it doesn't consider the class imbalance, making it misleading in this context.'
+    answers['(ii) Explain your choices of best and worst metrics'] = 'The F-measure is chosen as the best metric because it balances precision and recall, while accuracy is considered the worst metric as it doesnt consider the class imbalance, making it misleading in this context.'
     return answers
 
 
