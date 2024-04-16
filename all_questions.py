@@ -54,7 +54,7 @@ def question2():
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = '0.5*math.log((1-0.3)/0.3)'
+    answers['(c) Weight update'] = '0.5*math.log((1-p)/p)'
 
     # type: float
     # the answer should be correct to 3 significant digits
@@ -70,7 +70,7 @@ def question3():
     answers['Agree?'] = 'no'
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = 'Alan approach of using coin flips for stock market prediction lacks any basis in market analysis or data, making it highly unreliable and not conducive to obtaining accurate predictions.'
     return answers
 
 
@@ -133,14 +133,14 @@ def question6():
     answers['(b) C2 better classifier than C1?'] = 'yes'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = 'C2 is considered a better classifier than C1 because it achieves higher TPR and FPR due to its higher probability of correctly classifying the positive class and higher probability of incorrectly classifying the negative class.'
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
     answers['(c) Which metric?'] = 'precision/recall'
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = 'The evaluation metric pair that correctly indicates the relative performance of C2 and C1 is precision and recall. In this case, C2 has a higher expected recall (sensitivity) than C1, indicating its ability to correctly identify positive samples, making precision and recall more appropriate for comparing their performance.'
     return answers
 
 
@@ -153,21 +153,21 @@ def question7():
     answers['(i) Best classifier?'] = 'C2'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = 'C2 is selected because it exhibits higher recall and F1-measure than C1, showing a better balance in identifying positive cases and overall accuracy.'
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
     answers['(ii) appropriate metric pair'] = 'precision-recall-F1-Measure'
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = 'The Precision-recall-F1-Measure metrics provide a complete perspective on classifier performance by considering both the accuracy of positive predictions and the overall effectiveness of the classifier in a balanced manner.'
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
     answers['(iii) preferred classifier?'] = 'C3'
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = 'C3 is favored for providing the highest precision among the choices, which is crucial in situations where minimizing false positives, with their associated high costs, is paramount.'
     return answers
 
 
@@ -213,7 +213,7 @@ def question9():
     answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = 'The F-measure is chosen as the best metric because it balances precision and recall, while accuracy is considered the worst metric as it doesn't consider the class imbalance, making it misleading in this context.'
     return answers
 
 
@@ -234,10 +234,10 @@ def question10():
     answers['(c) Which evaluation measure to use between the two tests?'] = 'F1'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = 'to balance precision, F1-Score (harmonic mean of precision and recall) is suitable. In this case, T1 with a higher F1-Score would be preferred'
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = 'In a scenario where false positives lead to harmful treatments, prioritizing T2 (higher TPR/FPR) over T1 (higher F1-Score) reflects the need to minimize false positives impact in cancer detection.'
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
